@@ -16,12 +16,16 @@
   "plugins": [
     "react"
   ],
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/default-props-match-prop-types": "error",
     "react/no-array-index-key": "error",
@@ -54,6 +58,7 @@
     "react/jsx-pascal-case": "error",
     "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
     "react/jsx-wrap-multilines": "error",
+    "react/react-in-jsx-scope": 0,
     "space-in-parens": ["error", "always", { "exceptions": ["{}", "()", "empty"] }],
     "prefer-template": "error",
     "template-curly-spacing": ["error", "never"],
