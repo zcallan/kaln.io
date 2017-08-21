@@ -7,7 +7,7 @@ const HtmlPlugin = require( 'html-webpack-plugin' );
 module.exports = {
   devServer: {
     inline: true,
-    contentBase: './build',
+    contentBase: '/build',
     host: '0.0.0.0',
     port: 3000,
     historyApiFallback: true,
@@ -15,7 +15,7 @@ module.exports = {
   context: path.resolve( __dirname, './src' ),
   entry: path.resolve( __dirname, './src/Root.jsx' ),
   output: {
-    path: path.resolve( __dirname, './build' ),
+    path: path.resolve( __dirname, 'build/' ),
     filename: 'bundle.[hash].min.js',
   },
   devtool: 'eval',
