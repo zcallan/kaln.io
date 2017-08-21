@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { App } from 'views';
+import { h, render } from 'preact';
+import { Router } from 'preact-router';
+import { App, NotFound, Home } from 'views';
 
 
 const Root = (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <App>
+    <Router>
+      <Home path="/" />
+      <NotFound default />
+    </Router>
+  </App>
 );
 
-ReactDOM.render( Root, document.getElementById( 'root' ));
+render( Root, document.getElementById( 'root' ));

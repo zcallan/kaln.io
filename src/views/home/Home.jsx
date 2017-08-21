@@ -1,5 +1,5 @@
 import './home.scss';
-import React, { Component } from 'react';
+import { h, Component } from 'preact';
 
 
 class Home extends Component {

@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import Routes from './routes';
+import { h, Component } from 'preact';
 
 
 class App extends Component {
-  render() {
+  render({ children }) {
     return (
       <div>
-        <Routes />
+        {children}
       </div>
     );
   }
