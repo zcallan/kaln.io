@@ -1,3 +1,4 @@
+import 'styles/global.scss';
 import { h, render } from 'preact';
 import { Router } from 'preact-router';
 import { App, NotFound, Home } from 'views';
