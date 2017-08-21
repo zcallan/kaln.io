@@ -3,6 +3,8 @@ const webpack = require( 'webpack' );
 const path = require( 'path' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const HtmlPlugin = require( 'html-webpack-plugin' );
+const CopyPlugin = require( 'copy-webpack-plugin' );
+const CleanPlugin = require( 'clean-webpack-plugin' );
 
 module.exports = {
   devServer: {
@@ -64,5 +66,9 @@ module.exports = {
     }),
     new ExtractTextPlugin( 'styles.[hash].css' ),
     new HtmlPlugin({ template: 'index.html' }),
+    new CopyPlugin([ // eslint-disable-line space-in-parens
+      { from: path.resolve( __dirname, './src/assets/*' ), to: path.resolve( __dirname, './build' ) },
+    ]), // eslint-disable-line space-in-parens
+    new CleanPlugin( path.resolve( __dirname, './build' )),
   ],
 };
